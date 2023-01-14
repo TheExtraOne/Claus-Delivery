@@ -27,3 +27,23 @@
   object-fit: cover;
   transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 }
+
+@media (max-width: 530px) {
+  .header h1 {
+    font-size: 1.8rem;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 470px) {
+  .header h1 {
+    font-size: 1.8rem;
+    width: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 0 5%;
+  }
+}
