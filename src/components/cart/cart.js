@@ -1,5 +1,6 @@
 import Modal from "../UI/modal";
 import classes from "./cart.module.css";
+import { clientEvents } from "../emitter/client-events";
 
 const Cart = (props) => {
   const cartItems = (
@@ -10,6 +11,10 @@ const Cart = (props) => {
     </ul>
   );
 
+  const closeCart = () => {
+    clientEvents.emit("ECartClicked");
+  };
+
   return (
     <Modal>
       {cartItems}
@@ -18,7 +23,9 @@ const Cart = (props) => {
         <span>35.62</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes["button--alt"]}>Close</button>
+        <button className={classes["button--alt"]} onClick={closeCart}>
+          Close
+        </button>
         <button className={classes.button}>Order</button>
       </div>
     </Modal>
