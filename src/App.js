@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import Header from "./components/layout/header";
 import Meals from "./components/meals/meals";
 import Cart from "./components/cart/cart";
-import { clientEvents } from "./components/emitter/client-events";
+import CartProvider from "./store/cart-provider";
+import { clientEvents } from "./components/emiter/client-events";
 
 function App() {
   const [isCartShown, setIsCartShown] = useState(false);
@@ -19,13 +20,13 @@ function App() {
     };
   }, []);
   return (
-    <>
+    <CartProvider>
       {isCartShown && <Cart />}
       <Header />
       <main>
         <Meals />
       </main>
-    </>
+    </CartProvider>
   );
 }
 

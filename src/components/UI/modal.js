@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import classes from "./modal.module.css";
-import { clientEvents } from "../emitter/client-events";
+import { clientEvents } from "../emiter/client-events";
 
 const Backdrop = (props) => {
   const closeCart = () => {

@@ -1,12 +1,14 @@
-import classes from './input.module.css';
+import React from "react";
+import classes from "./input.module.css";
 
-const Input = (props) => {
+//React.forwardRef is needed here beacuse we pass ref via props from MealItemFormComponent
+const Input = React.forwardRef((props, ref) => {
   return (
     <div className={classes.input}>
       <label htmlFor={props.input.id}>{props.label}</label>
-      <input {...props.input} />
+      <input ref={ref} {...props.input} />
     </div>
   );
-};
+});
 
 export default Input;
