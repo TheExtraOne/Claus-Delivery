@@ -2,7 +2,7 @@
   "name": "claus-delivery",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/TheExtraOne/Claus-Delivery",
+  "homepage": "https://github.com/TheExtraOne",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
