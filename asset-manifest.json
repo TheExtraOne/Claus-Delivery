@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Claus-Delivery/static/css/main.0a685a08.css",
+    "main.js": "/Claus-Delivery/static/js/main.bc0ba138.js",
+    "static/media/meals.jpg": "/Claus-Delivery/static/media/meals.2971f633fc1382581cbf.jpg",
+    "index.html": "/Claus-Delivery/index.html",
+    "main.0a685a08.css.map": "/Claus-Delivery/static/css/main.0a685a08.css.map",
+    "main.bc0ba138.js.map": "/Claus-Delivery/static/js/main.bc0ba138.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a685a08.css",
+    "static/js/main.bc0ba138.js"
+  ]
+}
