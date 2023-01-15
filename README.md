@@ -1,6 +1,6 @@
 # About this App
 
-Hi! This is small pet-project, inspiring by oreilly course of Maximilian Schwarzmüller. Claus' Delivery - is simple SPA, where I tried to use css modeles, React portals, eventEmiter, React.forwardRef, reducer and store. Temprorary I'm not working with requests, that is why list of available dishes and cart are hardcorded. I'll improve it later.
+Hi! This is small pet-project, inspiring by oreilly course of Maximilian Schwarzmüller. Claus' Delivery - is simple SPA, where I tried to use css modeles, React portals, eventEmiter, React.forwardRef, reducer and store. Currently, I'm working with firebase.google.com in order to store data and send POST-requests.
 
 # Getting Started with Create React App
 
