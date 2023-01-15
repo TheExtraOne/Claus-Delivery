@@ -8,12 +8,19 @@ import MealItem from "./meal-item/meal-item";
 
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [errorHTTPS, setErrorHTTPS] = useState(null);
 
   useEffect(() => {
     const fetchMeals = async () => {
       const response = await fetch(
         "https://claus--delivery-default-rtdb.europe-west1.firebasedatabase.app//meals.json"
       );
+
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
+
       const responseData = await response.json();
 
       const loadedMeals = [];
@@ -28,10 +35,26 @@ const AvailableMeals = () => {
       }
 
       setMeals(loadedMeals);
+      setIsLoading(false);
     };
 
-    fetchMeals();
+    fetchMeals().catch((error) => {
+      setIsLoading(false);
+      setErrorHTTPS(error.message);
+    });
   }, []);
+
+  if (isLoading) {
+    return <div className={classes.loader}>loading</div>;
+  }
+
+  if (errorHTTPS) {
+    return (
+      <section className={classes.MealsError}>
+        <p>{errorHTTPS}</p>
+      </section>
+    );
+  }
 
   const mealsList = meals.map((meal) => (
     <MealItem
